@@ -2,7 +2,10 @@
   "pages": [
     {
       "path": "pages/index/index",
-      "type": "home"
+      "type": "home",
+      "style": {
+        "navigationStyle": "custom" // 仅当前页面禁用导航栏
+      }
     },
     {
       "path": "pages/profile/profile",

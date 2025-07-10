@@ -15,8 +15,6 @@
     "types": [
       "@dcloudio/types",
       "@uni-helper/uni-types",
-      "wot-design-uni/global",
-      "vite/client"
     ],
     "moduleResolution": "bundler",
     "sourceMap": true

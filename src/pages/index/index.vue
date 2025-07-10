@@ -20,5 +20,6 @@
         背靠 Uni Helper、Wot UI 团队，告别 HBuilderX ，拥抱现代前端开发工具链
       </text>
     </view>
+    <wd-button type="primary">hello world</wd-button>
   </view>
 </template>
