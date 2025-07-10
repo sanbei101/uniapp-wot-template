@@ -14,10 +14,10 @@
     },
     "types": [
       "@dcloudio/types",
-      "@mini-types/alipay",
       "@uni-helper/uni-types",
       "wot-design-uni/global"
     ],
+    "moduleResolution": "bundler",
     "sourceMap": true
   },
   "vueCompilerOptions": {

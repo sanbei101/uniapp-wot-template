@@ -1,27 +1,33 @@
 <script lang="ts" setup>
-const router = useRouter()
+import { useTabbar } from "@/composables/useTabbar";
+import { useTheme } from "@/composables/useTheme";
+import { useRouter, useRoute } from "uni-mini-router";
+import { onMounted, nextTick } from "vue";
 
-const route = useRoute()
+const router = useRouter();
 
-const { themeVars, theme } = useTheme()
+const route = useRoute();
 
-const { activeTabbar, getTabbarItemValue, setTabbarItemActive, tabbarList } = useTabbar()
+const { themeVars, theme } = useTheme();
+
+const { activeTabbar, getTabbarItemValue, setTabbarItemActive, tabbarList } =
+  useTabbar();
 
 function handleTabbarChange({ value }: { value: string }) {
-  setTabbarItemActive(value)
-  router.pushTab({ name: value })
+  setTabbarItemActive(value);
+  router.pushTab({ name: value });
 }
 
 onMounted(() => {
   // #ifdef APP-PLUS
-  uni.hideTabBar()
+  uni.hideTabBar();
   // #endif
   nextTick(() => {
     if (route.name && route.name !== activeTabbar.value.name) {
-      setTabbarItemActive(route.name)
+      setTabbarItemActive(route.name);
     }
-  })
-})
+  });
+});
 </script>
 
 <script lang="ts">
@@ -29,21 +35,33 @@ export default {
   options: {
     addGlobalClass: true,
     virtualHost: true,
-    styleIsolation: 'shared',
+    styleIsolation: "shared",
   },
-}
+};
 </script>
 
 <template>
-  <wd-config-provider :theme-vars="themeVars" :custom-class="`page-wraper ${theme}`" :theme="theme">
+  <wd-config-provider
+    :theme-vars="themeVars"
+    :custom-class="`page-wraper ${theme}`"
+    :theme="theme"
+  >
     <slot />
     <wd-tabbar
-      :model-value="activeTabbar.name" placeholder bordered safe-area-inset-bottom fixed
+      :model-value="activeTabbar.name"
+      placeholder
+      bordered
+      safe-area-inset-bottom
+      fixed
       @change="handleTabbarChange"
     >
       <wd-tabbar-item
-        v-for="(item, index) in tabbarList" :key="index" :name="item.name"
-        :value="getTabbarItemValue(item.name)" :title="item.title" :icon="item.icon"
+        v-for="(item, index) in tabbarList"
+        :key="index"
+        :name="item.name"
+        :value="getTabbarItemValue(item.name)"
+        :title="item.title"
+        :icon="item.icon"
       />
     </wd-tabbar>
     <!-- #ifdef MP-WEIXIN -->

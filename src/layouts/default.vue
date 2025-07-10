@@ -1,5 +1,7 @@
 <script lang="ts" setup>
-const { themeVars, theme } = useTheme()
+import { useTheme } from "@/composables/useTheme";
+
+const { themeVars, theme } = useTheme();
 </script>
 
 <script lang="ts">
@@ -7,13 +9,17 @@ export default {
   options: {
     addGlobalClass: true,
     virtualHost: true,
-    styleIsolation: 'shared',
+    styleIsolation: "shared",
   },
-}
+};
 </script>
 
 <template>
-  <wd-config-provider :theme-vars="themeVars" :theme="theme" :custom-class="`page-wraper ${theme}`">
+  <wd-config-provider
+    :theme-vars="themeVars"
+    :theme="theme"
+    :custom-class="`page-wraper ${theme}`"
+  >
     <slot />
     <wd-notify />
     <wd-message-box />
