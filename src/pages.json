@@ -3,7 +3,28 @@
     {
       "path": "pages/index/index",
       "type": "home"
+    },
+    {
+      "path": "pages/profile/profile",
+      "style": {
+        "navigationBarTitleText": ""
+      }
     }
   ],
-  "subPackages": []
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3CC51F",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的"
+      }
+    ]
+  }
 }

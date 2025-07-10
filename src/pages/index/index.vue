@@ -1,7 +1,7 @@
 <template>
   <view class="box-border py-3">
     <view
-      class="mx-3 box-border rounded-3 bg-white px-4 py-6 text-center dark:bg-[var(--wot-dark-background2)]"
+      class="mx-3 box-border rounded-xl bg-white px-4 py-6 text-center dark:bg-[var(--wot-dark-background2)]"
     >
       <text
         class="mb-3 block text-left text-5 text-gray-800 font-bold dark:text-gray-200"
