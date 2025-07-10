@@ -74,7 +74,7 @@
     "alova": "^3.3.2",
     "pinia": "^2.3.1",
     "vue": "~3.4.38",
-    "vue-i18n": "^9.14.0",
+    "vue-i18n": "^11.1.9",
     "wot-design-uni": "^1.10.0"
   },
   "devDependencies": {
@@ -116,7 +116,7 @@
     "uni-mini-router": "^0.1.6",
     "unocss": "^0.62.3",
     "unplugin-auto-import": "^0.18.2",
-    "vite": "^5.2.8",
+    "vite": "^5.4.19",
     "vue-tsc": "^2.0.28"
   },
   "simple-git-hooks": {
