@@ -170,5 +170,6 @@
       }
     ]
   },
+  "__esModule": true,
   "subPackages": []
 }
